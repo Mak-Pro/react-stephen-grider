@@ -14,9 +14,7 @@ class App extends Component {
 	render() {
 
 		return (
-			<div className="content__container">
-				Content
-			</div>
+			<h1>Hi there!</h1>
 	  );
 	}
   
