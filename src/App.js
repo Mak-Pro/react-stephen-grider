@@ -1,22 +1,47 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+
+// useState
+import Accordion from './components/Accordion.js';
+import CounterExercise from './components/Counter(Exercise).js';
+
+
+// useState, useEffect
+import Search from './components/Search.js';
 
 
 
-class App extends Component {
-	constructor(props) {
-		super(props);
-	}
+const App = () => {
 
-	state = {
-		
-	}
+	const items = [
+		{
+			id: 1,
+			title: 'What is React?',
+			content: 'React is a javascript library...',
+		},
+		{
+			id: 2,
+			title: 'How do we show content?',
+			content: 'We show content ib render method in class components and simply return in functional components',
+		},
+		{
+			id: 3,
+			title: 'Why is React useful?',
+			content: 'React is a very popular library in the world with the very big community'
+		},
 
-	render() {
+	]
 
-		return (
-			<h1>Hi there!</h1>
-	  );
-	}
+	
+	return (
+		<React.Fragment>
+			<Accordion items={items}/>
+			<hr />
+			<CounterExercise />
+			<hr />
+			<Search /> 
+		</React.Fragment>
+	);
   
 }
 
